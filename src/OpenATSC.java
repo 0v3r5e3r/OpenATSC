@@ -1,16 +1,16 @@
 import org.usb4java.LibUsb;
 import org.usb4java.LibUsbException;
 
-import openatsc.usbinterface.Interface;
+import openatsc.usbinterface.base.USBInterface;
 
 public class OpenATSC {
 	
-	private static Interface usbInterface;
+	private static USBInterface usbInterface;
 	
 	public OpenATSC()
 	{
 		try {
-			usbInterface = new Interface();
+			usbInterface = new USBInterface();
 			usbInterface.scanDevicesForTuner();
 		}catch(LibUsbException e) {
 			e.printStackTrace();
@@ -21,8 +21,8 @@ public class OpenATSC {
 	public static void main(String[] args)
 	{
 		new OpenATSC();
-		if(Interface.getGlobalContext() != null)
-			LibUsb.exit(Interface.getGlobalContext());
+		if(USBInterface.getGlobalContext() != null)
+			LibUsb.exit(USBInterface.getGlobalContext());
 	}
 	
 }

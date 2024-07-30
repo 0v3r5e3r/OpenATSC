@@ -1,4 +1,6 @@
-package openatsc.usbinterface;
+package openatsc.usbinterface.base;
+
+import openatsc.usbinterface.GenericDevice;
 
 public abstract class TVDevice {
 
@@ -66,6 +68,30 @@ public abstract class TVDevice {
 			m_initializationProgress = 0.0f;
 			m_deviceInitializationProgress = 0.0f;
 			m_previousInitalizationState = 0.0f;
+			//this.m_genericDevice = new GenericDevice()
 		}
+	}
+	
+	public boolean equals(int deviceType, String deviceName, boolean doLog) {
+		return (this.m_devicetype == deviceType && this.m_devicename.equals(deviceName));
+	}
+	
+	public boolean equals(Object o) {
+		if (o == null || !(o instanceof TVDevice))
+				return false;
+		TVDevice device = (TVDevice)o;
+		return equals(device.getDeviceType(), device.getDeviceName(), false);
+	}
+	
+	public int getDeviceType() {
+		return this.m_devicetype;
+	}
+	
+	public void setDeviceName(String deviceName) {
+		this.m_devicename = deviceName;
+	}
+	
+	public String getDeviceName() {
+		return this.m_devicename;
 	}
 }

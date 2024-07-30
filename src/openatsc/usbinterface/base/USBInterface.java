@@ -1,4 +1,4 @@
-package openatsc.usbinterface;
+package openatsc.usbinterface.base;
 
 import java.nio.ByteBuffer;
 
@@ -10,12 +10,12 @@ import org.usb4java.DeviceList;
 import org.usb4java.LibUsb;
 import org.usb4java.LibUsbException;
 
-public class Interface {
+public class USBInterface {
 
 	private static Context m_context;
 	private static short target_pid = Short.parseShort("692f",16);
 	
-	public Interface()
+	public USBInterface()
 	{
 		if(m_context != null)
 			return;
