@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <usb-device
+        vendor-id="8013"
+        product-id="41520">
+        <device-class name="com.elgato.eyetv.devices.EyeTVDeviceMicro"/>
+    </usb-device>
+    <usb-device
+        vendor-id="8013"
+        product-id="45616">
+        <device-class name="com.elgato.eyetv.devices.EyeTVDeviceMicro"/>
+    </usb-device>
+    <usb-device
+        vendor-id="8013"
+        product-id="41584">
+        <device-class name="com.elgato.eyetv.devices.EyeTVDeviceMicro"/>
+    </usb-device>
+    <usb-device
+        vendor-id="8013"
+        product-id="53872">
+        <device-class name="com.elgato.eyetv.devices.EyeTVDeviceMicro"/>
+    </usb-device>
+    <usb-device
+        vendor-id="6271"
+        product-id="513">
+        <device-class name="com.elgato.eyetv.devices.EyeTVDeviceMicro"/>
+    </usb-device>
+    <usb-device
+        vendor-id="6271"
+        product-id="514">
+        <device-class name="com.elgato.eyetv.devices.EyeTVDeviceMicro"/>
+    </usb-device>
+    <usb-device
+        vendor-id="8013"
+        product-id="41237">
+        <device-class name="com.elgato.eyetv.devices.EyeTVDeviceAfatech"/>
+    </usb-device>
+</resources>
